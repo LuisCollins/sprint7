@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+st.write('CREACION DE GRAFICOS')
+st.write('Seleciona un boton o casilla para crear el grafico correspondiente')
+st.write(' ')
+st.write(' ')
+
 car_data = pd.read_csv('vehicles_us.csv')
 hist_button = st.button('Construir histograma')  # crear un botón
 
@@ -28,7 +33,6 @@ if disp_button:  # al hacer clic en el botón
     fig.show()
 
 # crear una casilla de verificación
-# hist_button = st.button('Construir grafico de dispersion')  # crear un botón
 build_histogram = st.checkbox('Construir un histograma')
 
 if build_histogram:  # si la casilla de verificación está seleccionada
@@ -42,7 +46,6 @@ if build_histogram:  # si la casilla de verificación está seleccionada
 
 
 # crear una casilla de verificación
-# hist_button = st.button('Construir grafico de dispersion')  # crear un botón
 build_disper = st.checkbox('Construir un grafico de dispersion')
 
 if build_disper:  # si la casilla de verificación está seleccionada
